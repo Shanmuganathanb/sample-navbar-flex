@@ -1,40 +1,84 @@
+*{
+    box-sizing:border-box;
+
+}
 body{
-    color: red;
+    margin:0;
+    padding: 0;
 }
-.title{
-    font-size:6rem;
+.navbar{
+    display:flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#333;
+    color:white;
 }
-.subtitle{
-    font-size: 4rem;
+.brand{
+    font-size: 22px;
+    margin:10px;
+}
+.navbar-links{
+    height:100%;
+}
+.navbar-links ul{
+    margin:0;
+    padding:0;
+    display:flex;
+}
+.navbar-links li{
+    list-style:none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color:white;
+    padding:10px;
+    display:block;
+}
+.navbar-links li:hover{
+    background-color:#555;
+}
+.toggle-btn{
+    position: absolute;
+    top:10px;
+    right:20px;
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:30px;
+    height:21px
+}
+.toggle-btn .bar{
+    height:3px;
+    width:100%;
+    background-color: white;
+    border-radius:10px;
 }
 
-@media (max-width: 500px) {
-    body{
-        color:blue;
+@media (max-width:800px){
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
     }
-}
-
-@media (oreintation: landspace) and (min-width: 500px){
-    .title{
-        color:green;
+    .toggle-btn{
+        display:flex;
     }
-}
-
-@media (orientation: portrait){
-    .subtitle{
-        color:cyan;
+    .navbar-links{
+        display:none;
+        width:100%;
     }
-}
-
-/* 2nd question */
-@media (max-width:1000px) and (min-width: 500px){
-    body{
-        color:green;
+    
+    .navbar-links ul{
+        flex-direction:column;
+        width:100%;
     }
-}
-/* 3rd question */
-@media (min-width:1000px){
-    body{
-        color:blue;
+    .navbar-links ul li{
+        text-align:center;
+    }
+    .navbar-links ul li a{
+        padding: 10px 20px;
+    }
+    .navbar-links.active{
+        display:flex;
     }
 }
