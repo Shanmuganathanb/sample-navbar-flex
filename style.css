@@ -46,7 +46,7 @@ body{
     flex-direction:column;
     justify-content:space-between;
     width:30px;
-    height:21px
+    height:21px;
 }
 .toggle-btn .bar{
     height:3px;
