@@ -8,7 +8,6 @@ document.addEventListener('click',(e)=>{
 });
 
 // Not working 
-
 // toggleBtn.addEventListener('click',()=>{
 //     navbarLinks.classList.toggle('active');
 // })
